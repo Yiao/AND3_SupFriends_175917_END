@@ -18,8 +18,6 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
 
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -51,9 +49,8 @@
             android:label="@string/title_activity_maps" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login">
-
-        </activity>
+            android:label="@string/title_activity_login"></activity>
+        <activity android:name=".activity_withoutlogin"></activity>
     </application>
 
 </manifest>

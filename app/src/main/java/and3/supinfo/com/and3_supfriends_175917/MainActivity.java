@@ -8,6 +8,15 @@ import android.widget.TabHost;
 public class MainActivity extends TabActivity {
 
     private static String page = "0";
+    private static Boolean logged = false;
+
+    public static Boolean getLogged() {
+        return logged;
+    }
+
+    public static void setLogged(Boolean logged) {
+        MainActivity.logged = logged;
+    }
 
     public static String getPage() {
         return page;
@@ -39,9 +48,19 @@ public class MainActivity extends TabActivity {
 
         /** TabSpec setIndicator() is used to set name for the tab. */
         /** TabSpec setContent() is used to set content for a particular tab. */
-        firstTabSpec.setIndicator("Login").setContent(new Intent(this, LoginActivity.class));
-        secondTabSpec.setIndicator("ListInfo ").setContent(new Intent(this, ListActivity.class));
-        thirdTabSpec.setIndicator("Maps").setContent(new Intent(this, MapsActivity.class));
+        if (logged==false)
+        {
+            firstTabSpec.setIndicator("Login").setContent(new Intent(this, LoginActivity.class));
+            secondTabSpec.setIndicator("ListInfo ").setContent(new Intent(this, activity_withoutlogin.class));
+            thirdTabSpec.setIndicator("Maps").setContent(new Intent(this, activity_withoutlogin.class));
+        }
+        else
+        {
+            firstTabSpec.setIndicator("Login").setContent(new Intent(this, LoginActivity.class));
+            secondTabSpec.setIndicator("ListInfo ").setContent(new Intent(this, ListActivity.class));
+            thirdTabSpec.setIndicator("Maps").setContent(new Intent(this, MapsActivity.class));
+        }
+
 
 
         /** Add tabSpec to the TabHost to display. */

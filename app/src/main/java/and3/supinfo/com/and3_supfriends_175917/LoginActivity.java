@@ -199,6 +199,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         else if(username.equals("admin")&&password.equals("admin"))
         {
             MainActivity.setPage("1");
+            MainActivity.setLogged(true);
             Intent intent = new Intent(getBaseContext(), MainActivity.class);
             startActivity(intent);
 //            try
