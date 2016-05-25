@@ -57,7 +57,18 @@ public class MainActivity extends TabActivity {
         }
         else if (page.equals("2"))
         {
+            String myTitle = getIntent().getStringExtra("Title");
+            String myLatitude =getIntent().getStringExtra("Latitude");
+            String myLongitude =getIntent().getStringExtra("Longitude");
+            String mySnippet = getIntent().getStringExtra("snippet");
+            Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+            intent.putExtra("Title", myTitle);
+            intent.putExtra("Latitude", myLatitude);
+            intent.putExtra("Longitude", myLongitude);
+            intent.putExtra("snippet", mySnippet);
+            thirdTabSpec.setContent(intent);
             tabHost.setCurrentTab(2);
+
         }
         else if(page.equals("0"))
         {

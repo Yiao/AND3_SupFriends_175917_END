@@ -42,16 +42,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         double myLatitude = 47.8735098;
         double myLongitude = 1.8421691;
         String mySnippet = "Orleans";
-        try
-        {
-            myTitle =getIntent().getStringExtra("Title");
-            myLatitude = Float.parseFloat(getIntent().getStringExtra("Latitude"));
-            myLongitude =Float.parseFloat(getIntent().getStringExtra("Longitude"));
-            mySnippet =getIntent().getStringExtra("snippet");
-        }
-        catch (NullPointerException ex)
-        {
-            System.out.print("MAP : " + ex.getMessage());
+        if (null != getIntent()) {
+            try
+            {
+                myTitle = getIntent().getStringExtra("Title");
+                myLatitude = Float.parseFloat(getIntent().getStringExtra("Latitude"));
+                myLongitude = Float.parseFloat(getIntent().getStringExtra("Longitude"));
+                mySnippet = getIntent().getStringExtra("snippet");
+            }
+            catch(NullPointerException ex)
+            {
+                System.out.print("MAP : " + ex.getMessage());
+            }
         }
 
 
