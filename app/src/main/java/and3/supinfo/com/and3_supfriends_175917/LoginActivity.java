@@ -213,14 +213,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 //            {
 //                System.out.print(ex.getMessage());
 //            }
-
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
-//            showProgress(true);
-//            mAuthTask = new UserLoginTask(username, password);
-//            mAuthTask.execute((Void) null);
-
-            //lecture du fichier texte
+//
+////             Show a progress spinner, and kick off a background task to
+////             perform the user login attempt.
+////            showProgress(true);
+////            mAuthTask = new UserLoginTask(username, password);
+////            mAuthTask.execute((Void) null);
+////
+////            lecture du fichier texte
 //            new Thread(new Runnable() {
 //                public void run() {
 //                    try{
@@ -237,7 +237,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 //
 //                        JsonReader jsonReader = new JsonReader(new InputStreamReader(con.getInputStream()));
 //
-//                        mygoups = gson.fromJson(jsonReader, Groups[].class);
+//                        mygoups = gson.fromJson(String.valueOf(jsonReader), Groups[].class);
 //
 //                        for (Groups group : mygoups) {
 //

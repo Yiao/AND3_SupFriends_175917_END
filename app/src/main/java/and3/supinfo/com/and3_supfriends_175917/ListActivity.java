@@ -32,9 +32,10 @@ public class ListActivity extends AppCompatActivity {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        String[] values = new String[] { "myGroup",
-                "myGroup2",
-                "myGroup3",
+        String[] values = new String[] { "Yiao",
+                "Gael",
+                "Khalil",
+                "Eric",
         };
 
 
@@ -58,26 +59,33 @@ public class ListActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
-                if(item.equals("myGroup"))
+                if(item.equals("Yiao"))
                 {
                     intent.putExtra("Title", "QingDao China");
                     intent.putExtra("Latitude", "36.1357459");
                     intent.putExtra("Longitude", "120.0853454");
-                    intent.putExtra("snippet", "Group QingDao");
+                    intent.putExtra("snippet", "Yiao");
                 }
-                else if(item.equals("myGroup2"))
+                else if(item.equals("Gael"))
                 {
                     intent.putExtra("Title", "Paris France");
                     intent.putExtra("Latitude", "48.8589507");
                     intent.putExtra("Longitude", "2.2775175");
-                    intent.putExtra("snippet", "Group Paris");
+                    intent.putExtra("snippet", "Gael");
                 }
-                else if(item.equals("myGroup3"))
+                else if(item.equals("Khalil"))
                 {
                     intent.putExtra("Title", "Tunis");
                     intent.putExtra("Latitude", "36.7949999");
                     intent.putExtra("Longitude", "10.073238");
-                    intent.putExtra("snippet", "Group Tunis");
+                    intent.putExtra("snippet", "Khalil");
+                }
+                else if(item.equals("Eric"))
+                {
+                    intent.putExtra("Title", "Lille");
+                    intent.putExtra("Latitude", "50.6310465");
+                    intent.putExtra("Longitude", "2.9771209");
+                    intent.putExtra("snippet", "Eric");
                 }
                 else
                 {

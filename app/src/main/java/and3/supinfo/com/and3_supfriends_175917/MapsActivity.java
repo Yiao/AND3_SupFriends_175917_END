@@ -60,9 +60,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         }
 
-
-
-
         LatLng mypostion = new LatLng(myLatitude,myLongitude );
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mypostion, 10));
